@@ -1,0 +1,270 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Vazirmatn', sans-serif;
+  line-height: 1.8;
+  color: #333;
+  background-color: #fff;
+  direction: rtl;
+  text-align: right;
+}
+
+.container {
+  width: 90%;
+  max-width: 960px;
+  margin: 0 auto;
+  font-weight: 300;
+
+}
+
+header {
+  background: #fff;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 450;
+
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 450;
+}
+
+nav a {
+  margin-right: 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 450;
+}
+
+nav a:hover {
+  color: #0070f3;
+}
+
+.hero {
+  background: #f7f9fc;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 2.2rem;
+  font-weight: 450;
+
+}
+
+.highlight {
+  color: #0070f3;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 25px;
+  background: #0070f3;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 450;
+}
+
+.btn:hover {
+  background: #0059c1;
+}
+
+.section {
+  padding: 60px 0;
+
+}
+
+.bg-light {
+  background: #f1f1f1;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+
+  
+
+}
+
+.project-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  
+
+}
+
+.socials a {
+  margin-left: 15px;
+  text-decoration: none;
+  color: #0070f3;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background: #f9f9f9;
+  font-size: 0.9rem;
+}
+
+/* بخش پروفایل */
+.profile {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-left: 20px;
+  object-fit: cover;
+  border: 3px solid #0070f3;
+}
+
+.profile-text h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-weight: 450;
+}
+
+.profile-text p {
+  font-size: 1rem;
+  color: #666;
+  font-weight: 450;
+}
+/* اضافه به انتهای style.css */
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 10px;
+    font-family: inherit;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .contact-form button {
+    padding: 10px 20px;
+    background-color: #0070f3;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .contact-form button:hover {
+    background-color: #0059c1;
+  }
+  
+  /* اسلایدر */
+  .slider {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .slides {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .slide {
+    min-width: 100%;
+    display: none;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  .slide.active {
+    display: block;
+  }
+  
+  .slider-nav {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .slider-nav button {
+    background: #0070f3;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    margin: 0 5px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .slider-nav button:hover {
+    background: #0059c1;
+  }
+  /* انیمیشن برای دکمه‌ها */
+
+.contact-form button,
+.slider-nav button,
+.btn {
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-form button::after,
+.slider-nav button::after,
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  pointer-events: none;
+}
+
+.contact-form button:hover,
+.slider-nav button:hover,
+.btn:hover {
+  background-color: #0059c1;
+  transform: scale(1.03);
+}
+
+.contact-form button:hover::after,
+.slider-nav button:hover::after,
+.btn:hover::after {
+  transform: translateX(0);
+}
+.pr{
+    font-weight: 550;
+}
